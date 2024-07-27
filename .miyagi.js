@@ -1,8 +1,8 @@
 import fs from "node:fs";
-import { createEnvironment, createFilesystemLoader } from "twing";
+import { createSynchronousEnvironment, createSynchronousFilesystemLoader } from "twing";
 
-const loader = createFilesystemLoader(fs);
-const twing = createEnvironment(loader);
+const loader = createSynchronousFilesystemLoader(fs);
+const twing = createSynchronousEnvironment(loader);
 
 export default {
 	components: {
